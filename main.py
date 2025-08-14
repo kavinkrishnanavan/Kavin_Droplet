@@ -55,7 +55,7 @@ def login(u , p):
             with open("u.txt", "w") as file:
                 file.write(str(datetime.now()))
             
-            page = st.page_link("gogo.py", label="Click to go to Main Application", icon="🛢️")
+            page = st.page_link("pages\gogo.py", label="Click to go to Main Application", icon="🛢️")
             progress_text = "Portal expires in 10 seconds for Security Measures"
             my_bar = st.progress(0, text=progress_text)
             
@@ -78,5 +78,4 @@ def login(u , p):
 
 if st.button("Login"):
     print("Pressed")
-
     login(username , password)
